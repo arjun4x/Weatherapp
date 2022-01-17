@@ -2,7 +2,7 @@ import React, {useState}from 'react';
 import './App.css';
 
 const api ={
-  api : "a200ea93f7d60cf66f748f5c3fd8be01" ,
+  key : "a200ea93f7d60cf66f748f5c3fd8be01" ,
   base :"http://api.openweathermap.org/data/2.5/"
 }
 
@@ -38,7 +38,7 @@ function App() {
 
   }
   return (
-    <div className="app">
+    <div className={(typeof weather.main!=="undefined") ?( (weather.main.temp>25) ? "app-warm" : "app" ):"app"}>
     <main>
       <div className="search">
         <input type="text"
@@ -49,16 +49,16 @@ function App() {
         onKeyPress={search}/>
       </div>
       <div className="location-box">
-        <div className="location">Kochi , kerala</div>
+        <div className="location">{weather.name ? `${weather.name},${weather.sys.country}` : "Enter the place "  }</div>
         <div className="date">{dateBuilder(new Date())}</div>
       </div>
       <div className="weather-box">
         <div className="temp">
-        15°C
+      {weather.main ? ` ${Math.round(weather.main.temp)} ${"°C"}`  : "temp"}
         </div>
         </div>
         <div className="weather1-box">
-          Sunny
+        {weather.main ? `${weather.weather.map(x=>x.description)}` : "description" }
         </div>
       
       </main>

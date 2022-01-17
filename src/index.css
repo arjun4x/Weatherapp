@@ -9,12 +9,20 @@ body{
 }
 .app{
     background-image : url('./images/cloudy.jpg');
-    background-size:cover;
+    background-size:100vw 100%;
     background-position: bottom;
+   
+    transition: all 1000ms ease;
    
 }
 .app-warm{
-    background-image:url(https://www.survivingwithandroid.com/wp-content/uploads/2014/11/android_weather_app.jpg);
+    background-image:url('./images/james-day-5YWf-5hyZcw-unsplash.jpg');
+    background-size:100vw 100%;
+    background-position: bottom;
+   
+    
+    transition: all 5000ms ease;
+
 
 }
 main{
@@ -24,19 +32,19 @@ main{
     
 }
 .search-box{
-    width : 100%;
+    width : 100vh;
     margin : 0 0 75px;
     
   
 }
 .search{
-    padding-left :560px;
+    margin-left :40%;
 }
 
 .search-box .search-bar{
     display : block;
-    width :100%;
-    padding-left : 150px;
+    width :50vw;
+   
    
 
     appearance : none;
@@ -45,65 +53,69 @@ main{
     outline : none;
 
     background-color : rgba(255,255,255,0.5);
-    border-radius : 0px 0px 16px 16px;
-    margin-top : -25px;
-    box-shadow : 0px 5px rgba(0,0,0,0.2);
+    border-radius : 0vw 0vw 3vw 3vw;
+    margin-top : 1vh;
+    box-shadow : 0px 1vw rgba(0,0,0,0.2);
 
     color : #313131;
-    font-size : 20px;
+    font-size : 4vw;
 
     transition: 0.4 ease;
 }
 .location-box .location{
-    padding-top: 50px;
+    padding-top: 2vh;
     color : #FFF;
-    font-size : 32px;
+    font-size : 2.5vw;
     font-weight : 500;
     text-align : center;
-    text-shadow : 3px 3px rgba(50, 50, 70, 0.5 ); 
+    text-shadow : 1vw 1vw rgba(50, 50, 70, 0.5 ); 
+    margin-bottom: 2vw;
+    
 }
 .location-box .date{
     color : #FFF;
-    font-size : 20px;
+    font-size : 2.5vw;
     font-weight : 300;
     font-style : italic;
     text-align : center;
     text-shadow : 2px 2px rgba(50, 50, 70, 0.5 ); 
+    margin-bottom: 3vw;
+   
 }
 .weather-box .temp{
    
     position : relative;
-    margin : 30px auto;
-    margin-left:520px;
+    
+    margin-left:38vw;
     display : inline-block;
     background-color : rgba(255,255,255,0.1);
-    border-radius : 40px;
-    padding : 15px 25px ;
+    border-radius : 3vw;
+    padding : 1vw 2vh ;
+    margin-bottom:5vw;
     
      color : rgba(255,255,255,0.5);
-     font-size : 102px;
+     font-size : 6vw;
      font-weight : 900;
 
      text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
      text-align: center;
+     
 
 }
 .weather1-box {
     
     background-color: rgba(255,255,255,0.1);
-    font-size: 50px;
+    font-size: 2vw;
     font-weight: 600;
     color: rgba(255,255,255,0.4);
     text-shadow:  3px 6px rgba(50, 50, 70, 0.5);
-    padding : 15px 25px ;
+    padding : 1vw 2vh ;
     text-align:center;
-    border-radius: 40px;
+    border-radius: 5vw;
     display : inline-block;
-   margin-left:560px;
+   margin-left:40vw;
+   margin-bottom: 0.5vw;
     
    
     
-}
-.temp{
-    margin-left: 500px;
 }
